@@ -1,0 +1,4 @@
+{
+  "buildCommand": "VERCEL=1 pnpm build",
+  "framework": null
+}

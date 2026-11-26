@@ -1,0 +1,5 @@
+onlyBuiltDependencies:
+  - esbuild
+  - lightningcss
+  - '@tailwindcss/oxide'
+  - workerd

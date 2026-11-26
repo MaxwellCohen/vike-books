@@ -1,0 +1,15 @@
+import type { Config } from 'vike/types'
+import vikeReact from 'vike-react/config'
+
+export default {
+  extends: [vikeReact],
+  title: 'Vike Books',
+  description:
+    'Browse two million Goodreads books with Vike, server-rendered search, and URL-driven filters.',
+  htmlAttributes: { lang: 'en' },
+  bodyAttributes: {
+    class: 'bg-surface text-black antialiased dark:bg-surface-dark dark:text-white',
+  },
+  // https://vike.dev/server — Vike's built-in server, adapted per host by the Vite plugin.
+  server: true,
+} satisfies Config
