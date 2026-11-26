@@ -10,6 +10,4 @@ export default {
   bodyAttributes: {
     class: 'bg-surface text-black antialiased dark:bg-surface-dark dark:text-white',
   },
-  // https://vike.dev/server — Vike's built-in server, adapted per host by the Vite plugin.
-  server: true,
 } satisfies Config
