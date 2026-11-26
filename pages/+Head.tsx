@@ -13,12 +13,6 @@ export function Head() {
       <meta content="Vike Books" property="og:title" />
       <meta content="website" property="og:type" />
       <link href="/icon.svg" rel="icon" type="image/svg+xml" />
-      <link href="https://fonts.googleapis.com" rel="preconnect" />
-      <link crossOrigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
-        rel="stylesheet"
-      />
       <script dangerouslySetInnerHTML={{ __html: themeScript }} />
     </>
   )

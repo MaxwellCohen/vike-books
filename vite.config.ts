@@ -16,7 +16,17 @@ const hostPlugins: PluginOption[] = isCloudflare
   : isNetlify
     ? [netlify({ build: { enabled: true } })]
     : isVercel
-      ? [vercel()]
+      ? [
+          vercel({
+            // Hashed build assets never change: let browsers and the CDN keep them.
+            headers: [
+              {
+                source: '/assets/(.*)',
+                headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+              },
+            ],
+          }),
+        ]
       : []
 
 export default defineConfig({

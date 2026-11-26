@@ -1,7 +1,10 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "vike-books",
+  "name": "vike-books-optimized",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "vike:server"
+  "main": "vike:server",
+  "kv_namespaces": [
+    { "binding": "CATALOG_CACHE", "id": "9c7fc9d39b3d401db99e1680240bef06" }
+  ]
 }

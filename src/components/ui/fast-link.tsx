@@ -13,7 +13,7 @@ export function FastLink({
   children = null,
   href,
   onPressNavigate,
-  prefetch: _prefetch,
+  prefetch = 'intent',
   className,
   ...rest
 }: Props) {
@@ -23,6 +23,9 @@ export function FastLink({
   return (
     <a
       className={className}
+      data-prefetch-static-assets={
+        prefetch === false ? 'false' : prefetch === true || prefetch === 'viewport' || prefetch === 'render' ? 'viewport' : undefined
+      }
       href={href}
       {...rest}
       onMouseDown={(event) => {
