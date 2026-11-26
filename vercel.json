@@ -1,4 +1,11 @@
 {
   "buildCommand": "VERCEL=1 pnpm build",
-  "framework": null
+  "framework": null,
+  "git": {
+    "deploymentEnabled": {
+      "**": false,
+      "main": true,
+      "optimized": true
+    }
+  }
 }
