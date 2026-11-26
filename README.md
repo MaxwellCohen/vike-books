@@ -24,6 +24,7 @@ Copy `.env.example` to `.env`.
 | Netlify | https://vike-books.netlify.app | `NETLIFY=1` |
 | Cloudflare Workers | https://vike-books.to-email-max.workers.dev | `CLOUDFLARE=1` (or `WORKERS_CI`, set by Workers Builds) |
 
-- The app uses Vike's built-in server (`+server: true`); the Vite plugin for the host adapts it: `vite-plugin-vercel`, `@netlify/vite-plugin`, or `@cloudflare/vite-plugin` (`main: "vike:server"`). With no flag it targets Node.
+- Vercel and Netlify are connected to this repo: a push to `main` builds and deploys to both. Cloudflare is deployed with `pnpm deploy:cloudflare`.
+- The app uses Vike's built-in server (`pages/+server.ts` without a `fetch` export); the Vite plugin for the host adapts it: `vite-plugin-vercel`, `@netlify/vite-plugin`, or `@cloudflare/vite-plugin` (`main: "vike:server"`). With no flag it targets Node.
 - `POSTGRES_URL` is set on every host (Vercel and Netlify environment variable, Cloudflare secret). Without it the app serves the preview catalog.
 - Manual deploys: `pnpm deploy:vercel`, `pnpm deploy:netlify`, `pnpm deploy:cloudflare`.
